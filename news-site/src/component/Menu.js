@@ -1,36 +1,28 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import { Routes, Route, Link } from 'react-router-dom';
+import logo from './logo.svg';
+import Science from './Science'
+import Sport from './Sport';
+import Technologies from './Technologies';
+import Fashion from './Fashion';
+import ListNews from './ListNews'
+import { Layout } from './Layout';
 import '../style.css';
 
 export default class Menu extends Component {
   render() {
     return (
-      
-      <header className='header'>
-        <div className="container">
-                <nav className="navigation grid">
-                    <a href="/" className="navigation_logo">
-                        {/* <img
-                            src={logo} 
-                            width='150px'
-                            height='50px'
-                            alt="Logo" 
-                            className="navigation_img" /> */}
-                    </a>
-                    <ul className="navigation_list">
-                        <li className="navigation_item">
-                            <a href="#" className="navigation_link">Главная</a></li>
-                        <li className="navigation_item">
-                            <a href="#" className="navigation_link">Мода</a></li>
-                        <li className="navigation_item">
-                            <a href="#" className="navigation_link">Технологии</a></li>
-                        <li className="navigation_item">
-                            <a href="#" className="navigation_link">Музыка</a></li>
-                    </ul>
-            </nav>
-            </div>
-        </header>
-    
+      <>
+        <Routes>
+            <Route path="/" element={<Layout/>}>
+                <Route index element = { <ListNews /> } />
+                <Route path="/technologies" element = { <Technologies /> } />
+                <Route path="/science" element = { <Science /> } />
+                <Route path="/sport" element = { <Sport /> } />
+                <Route path="/fashion" element = { <Fashion /> } />
+            </Route>
+        </Routes>
+      </>
     )
   }
 }

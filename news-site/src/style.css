@@ -160,10 +160,12 @@ span{
 
 
 :root{
-	--color-orange: #FF5533;
-	--color-black: #262A2F;
+	--color-orange: #ec6613;
+	--color-black: #000000;
 	--color-gray: #868686;
-	--color-backg: #E5E5E5;
+	--color-backg: #dcdcdc;
+	--color-white: #fff;
+	--color-bclogo: #161B1D;
 }
 
 *{
@@ -179,8 +181,9 @@ body{
 
 /* ---------------MENU------------------- */
 .header{
-	padding-top: 38px;
-	padding-bottom: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: var(--color-bclogo);
 }
 .main{
 	margin-bottom: 20px;
@@ -189,6 +192,8 @@ body{
 	max-width: 1435px;
 	margin: 0 auto;
 }
+.navigation{
+}
 .grid{
 	display: grid;
 	grid-template-columns: repeat(12, 101px);
@@ -196,7 +201,7 @@ body{
 }
 
 .navigation_logo{
-	grid-column: span 4;
+	grid-column: span 3;
 }
 .navigation_img{
 	display: block;
@@ -215,10 +220,9 @@ body{
 }
 .navigation_link{
 	font-family: 'Rubik';
-	font-weight: 900;
-	font-size: 24;
-	color: var(--color-black);
-	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 20px;
+	color: var(--color-white);
 	cursor: pointer;
 }
 .navigation_link:hover{
@@ -229,7 +233,9 @@ body{
 }
 /* ------------------------------------------ */
 
-
+.articles{
+	margin-top: 10px;
+}
 .big_collumn{
 	grid-column: span 9;
 }
@@ -239,7 +245,7 @@ body{
 
 .main_article{
 	display: grid;
-	grid-template-columns: repeat(9, 101px);
+	grid-template-columns: repeat(11, 101px);
 	gap: 20px;
 	margin-bottom: 30px;
 }
@@ -253,13 +259,13 @@ body{
 	position: relative;
 }
 .article_img{
-	width: 100%;
+	max-width: 550px;
 	height: 100%;
 	object-fit: cover;
 	position: absolute;
 }
 .content_container{
-	grid-column: 4/-1;
+	grid-column: 6/-1;
 	padding-right: 63px;
 }
 .main_article_category{
@@ -268,7 +274,7 @@ body{
 .article_title{
 	font-style: normal;
 	font-weight: 700;
-	font-size: 42px;
+	font-size: 32px;
 	line-height: 50px;
 	color: var(--color-black);
 	margin-bottom: 34px;
@@ -281,7 +287,7 @@ body{
 .main_article_text{
 	font-style: normal;
 	font-weight: 400;
-	font-size: 22px;
+	font-size: 16px;
 	line-height: 26px;
 	color: var(--color-black);
 	margin-bottom: 34px;

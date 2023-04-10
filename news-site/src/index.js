@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import api from './config'
+import React from 'react'
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ListNews from './component/ListNews'
-// import App from './App';
+// import ListNews from './component/ListNews'
 import Menu from './component/Menu'
-import Block_news from './component/Block_news';
+import { BrowserRouter } from 'react-router-dom';
 
-// dsdsds
-// ji
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
+    <BrowserRouter>
     <Menu></Menu>
-    {/* <Block_news></Block_news> */}
-    <ListNews></ListNews>
+    {/* <ListNews></ListNews> */}
+    </BrowserRouter>
   </React.StrictMode>
 );
